@@ -1,0 +1,364 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: all 100ms ease-in;
+
+}
+body{
+    background-color: #000;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.msg{
+    width: 90%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 90px;
+    font-weight: bolder;
+    color: #ff00c3;
+    text-align: center;
+    opacity: 0;
+    
+    padding-top: 30%;
+    // padding-bottom: 5%;
+    // margin-top: 30%;
+    animation: message  4s ease-in-out 5s forwards;
+    padding-left: 21%;
+
+}
+
+@keyframes message {
+    0%{
+        opacity: 0;
+        margin-top: -5%;
+    }
+    100%{
+        opacity: 1;
+        margin-top: -230px;
+    }
+}
+
+.y1{
+    color: #fff;
+    animation: y1color 2s ease-in-out 5.72s forwards;
+}
+
+.y2{
+    color: #fff;
+    animation: y2color 2s ease-in-out 5.72s forwards;
+}
+
+.y3{
+    color: #fff;
+    animation: y3color 2s ease-in-out 5.72s forwards;
+}
+
+.y4{
+    color: #fff;
+    animation: y4color 2s ease-in-out 5.72s forwards;
+}
+
+
+@keyframes y1color { 
+    0%{
+        color: #fff;
+
+    }
+    100%{
+        color: orange;
+    }
+}
+
+
+@keyframes y2color { 
+    0%{
+        color: #fff;
+
+    }
+    100%{
+        color: #4cdde2;
+    }
+}
+
+
+@keyframes y3color { 
+    0%{
+        color: #fff;
+
+    }
+    100%{
+        color: #f77b90;
+    }
+}
+
+
+@keyframes y4color { 
+    0%{
+        color: #fff;
+
+    }
+    100%{
+        color: yellow;
+    }
+}
+
+
+
+.old{
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    animation: old_animation 2.5s ease-in-out 4.20s forwards;
+    padding-left: 20px;
+    text-align: center;
+}
+
+@keyframes old_animation{
+    0%{
+        top: 0%;
+
+    }
+    100%{
+        top: -400%;
+    }
+}
+
+
+
+.year{
+    position: absolute;
+    top: 430px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.year > span{
+    font-size: 165px;
+    font-weight: 700;
+    font-family:fantasy;
+    letter-spacing: -9px;
+}
+
+.First-year{
+    padding-left: -7%;
+    margin-top: 100%;
+}
+
+.new{
+    position: absolute;
+    right: -90px;
+    animation: new_Animatin 5s ease-in-out 1.5s forwards;
+}
+
+@keyframes new_Animatin{
+
+    0%{
+        right: -50%;
+    }
+    40%{
+      right: 386px;
+    }
+    90%{
+        right: 465px;
+    }
+    100%{
+       right: 520px;
+       color: yellow;
+      }
+}
+.baloon{
+    width: 100px;
+    height: 105px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    right: -106%;
+    margin-top: -250px;
+    animation: baloon_new_Animatin 5s ease-in-out 1.5s forwards;
+    
+
+
+}
+
+
+
+
+.baloon::after{
+    content: '';
+    width: 4px;
+    height: 100px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    bottom: -100px;
+   
+}
+
+.baloon::before{
+    content: '';
+    border-style: solid;
+    border-width: 0 10px 20px 10px;
+    border-color:  transparent transparent #fd3553 transparent;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -10px;
+}
+
+
+@keyframes baloon_new_Animatin{
+
+    0%{
+        right: -50%;
+    }
+    40%{
+      right: 385px;
+    }
+    50%{
+        right: 509px;
+        top: 50%;
+    }
+    100%{
+       right: 509px;
+       top:-200%;
+      }
+}
+
+.firework{
+    position: relative;
+    opacity: 0;
+    animation: show_firework 2s ease-in-out 5s forwards;
+}
+
+@keyframes show_firework {
+    0%{
+       opacity: 0;
+    }
+    99%{   
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+.cracker{
+    position: absolute;
+    width: 4px;
+    height: 80px;
+    transform-origin: 60% 100%;
+}
+
+.cracker::before{
+content: '';
+background-color: gold;
+height: 40px;
+position: absolute;
+left: 0;
+right: 0;
+animation:  fire 2s ease-in-out infinite;
+
+}
+@keyframes fire{
+    0%{
+    top: 100%;
+    }
+    25%{
+        top: 50%;
+    }
+    50%{
+        top: -25%;
+    }
+    75%{
+        top: -50%;
+    }
+    100%{
+        top: -50%;
+    }
+
+}
+
+
+.cracker:nth-child(1){
+    transform: rotate(0deg) translateY(-15px);
+}
+
+.cracker:nth-child(2){
+    transform: rotate(50deg) translateY(-15px);
+}
+
+.cracker:nth-child(3){
+    transform: rotate(60deg) translateY(-15px);
+}
+
+.cracker:nth-child(4){
+    transform: rotate(90deg) translateY(-15px);
+}
+
+.cracker:nth-child(5){
+    transform: rotate(120deg) translateY(-15px);
+}
+
+.cracker:nth-child(6){
+    transform: rotate(150deg) translateY(-15px);
+}
+
+
+.cracker:nth-child(7){
+    transform: rotate(180deg) translateY(-15px);
+}
+
+
+.cracker:nth-child(8){
+    transform: rotate(240deg) translateY(-15px);
+}
+
+.cracker:nth-child(9){
+    transform: rotate(270deg) translateY(-15px);
+}
+
+.cracker:nth-child(10){
+    transform: rotate(300deg) translateY(-15px);
+}
+
+.cracker:nth-child(11){
+    transform: rotate(330deg) translateY(-15px);
+}
+
+
+.cracker:nth-child(12){
+    transform: rotate(0deg) translateY(-15px);
+}
+
+
+#firWorkdNew{
+    left: 25%;
+    // top: 9%;
+    transform: scale(1);
+}
+
+#firWorkdNew1{
+    left: 40%;
+    // top: 14%;
+    transform: scale(0.3);
+}
+
+#firWorkdNew2{
+    left: 5%;
+    // top: 18%;
+    transform: scale(0.4);
+}
+
+#firWorkdNew3{
+    left: 36%;
+    // top: 10%;
+    transform: scale(0.5);
+}
